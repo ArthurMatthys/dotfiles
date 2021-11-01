@@ -1,0 +1,5 @@
+
+[Default Applications]
+x-scheme-handler/notion=notion-app.desktop
+x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/postman=Postman.desktop

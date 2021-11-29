@@ -69,19 +69,197 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["packer.nvim"] = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  delimitMate = {
     loaded = false,
     needs_bufread = false,
-    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/delimitMate",
+    url = "https://github.com/Raimondi/delimitMate"
+  },
+  ["indent-blankline.nvim"] = {
+    config = { "require('config.indent-blankline')" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  neoformat = {
+    commands = { "Neoformat" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
+  nerdtree = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-treesitter"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-symbols.nvim"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/telescope-symbols.nvim",
+    url = "https://github.com/nvim-telescope/telescope-symbols.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-airline"] = {
+    load_after = {
+      ["vim-airline-themes"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    after = { "vim-airline" },
+    load_after = {
+      ["vim-signify"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-commentary"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-flog"] = {
+    commands = { "Flog" },
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-flog",
+    url = "https://github.com/rbong/vim-flog"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-gruvbox8"] = {
+    loaded = true,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/start/vim-gruvbox8",
+    url = "https://github.com/lifepillar/vim-gruvbox8"
+  },
+  ["vim-json"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-json",
+    url = "https://github.com/elzr/vim-json"
+  },
+  ["vim-nerdtree-syntax-highlight"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-nerdtree-syntax-highlight",
+    url = "https://github.com/tiagofumo/vim-nerdtree-syntax-highlight"
+  },
+  ["vim-signify"] = {
+    after = { "vim-airline-themes" },
     loaded = false,
     needs_bufread = false,
-    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-gruvbox8"
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-signify",
+    url = "https://github.com/mhinz/vim-signify"
+  },
+  ["vim-toml"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-toml",
+    url = "https://github.com/cespare/vim-toml"
   }
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Flog lua require("packer.load")({'vim-flog'}, { cmd = "Flog", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neoformat lua require("packer.load")({'neoformat'}, { cmd = "Neoformat", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType toml ++once lua require("packer.load")({'vim-toml'}, { ft = "toml" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-json'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-json'}, { ft = "json" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'delimitMate'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'indent-blankline.nvim', 'vim-commentary'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufEnter * ++once lua require("packer.load")({'nvim-treesitter', 'vim-signify'}, { event = "BufEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]], true)
+vim.cmd [[source /home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]]
+time([[Sourcing ftdetect script at: /home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-toml/ftdetect/toml.vim]], false)
+time([[Sourcing ftdetect script at: /home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim]], true)
+vim.cmd [[source /home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim]]
+time([[Sourcing ftdetect script at: /home/amatthys/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

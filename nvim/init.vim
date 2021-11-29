@@ -80,17 +80,34 @@ set termguicolors
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%81v', 100)
 
+" Fold method
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+nnoremap <C-_> :NERDTreeToggle<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                PLUGINS                                      "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Gruvbox theme
 set background=dark " or light if you want light mode
 colorscheme gruvbox8_hard
 
-" Run PackerCompile whenever plugins.lua is modified
+" Airline theme
+let g:airline_theme='base16_gruvbox_dark_hard'
+
 augroup packer_user_config
   autocmd!
   autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 augroup end
 
 lua require('plugins')
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * silent! undojoin | Neoformat
+augroup END

@@ -4,6 +4,9 @@
 alias g='git'
 
 #compdef g=git
+alias gcl='git clone'
+
+#compdef g=git
 alias gst='git status'
 
 #compdef g=git
@@ -30,3 +33,5 @@ end
 
 alias vi="nvim"
 alias vim="nvim"
+
+export MAKEFLAGS="-j16"

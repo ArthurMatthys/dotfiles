@@ -34,14 +34,14 @@
         }
     },
     "disk": {
-        "format": "<span foreground='#928374'></span> {percentage_free}%",
+        "format": "<span foreground='#928374'></span> {percentage_used}%",
         "states": {
             "warning": 70,
             "critical": 90
         }
     },
     "memory": {
-        "format": "<span foreground='#928374'></span> {}%",
+        "format": "<span foreground='#928374'></span> {}%",
         "states": {
             "warning": 70,
             "critical": 90

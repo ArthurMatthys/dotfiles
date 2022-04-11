@@ -20,6 +20,9 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
+bindsym $mod+Shift+w exec pkill -SIGUSR1 '^waybar$'
+# bindsym $mod+Shift+p exec grim -g `slurp`
+bindsym $mod+Shift+p exec grim -g "$(slurp)" "$HOME/screenshots/$(date '+%y%m%d_%H-%M-%S').png"
 
 ### Output configuration
 #
@@ -45,7 +48,9 @@ output * bg  ~/images/wallpaper/wallpaper_made_in_abyss.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-input 1:1:AT_Translated_Set_2_keyboard xkb_options 'caps:escape'
+input 1:1:AT_Translated_Set_2_keyboard xkb_options 'caps:escape, compose:menu'
+input "2362:597:UNIW0001:00_093A:0255_Touchpad" tap enable
+exec mako
 
 ### Input configuration
 #
@@ -134,6 +139,9 @@ mode "application" {
     # application [b]rowser
     bindsym b exec firefox, mode "default"
 
+    # application [c]hrome
+    bindsym c exec google-chrome-stable, mode "default"
+
     # application [d]eezer
     bindsym d exec deezer, mode "default"
 
@@ -151,6 +159,12 @@ mode "application" {
 
     # application [t]ypora
     bindsym t exec typora, mode "default"
+
+    # application [s]lack
+    bindsym s exec slack, mode "default"
+
+    # application [g]ummi
+    bindsym g exec gummi, mode "default"
 
     bindsym Escape mode "default"
 }
@@ -207,9 +221,9 @@ bindsym $mod+space mode "application"
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
     
-    set $ws1 1:
+    set $ws1 1:
     set $ws2 2:
-    set $ws3 3:
+    set $ws3 3:
     set $ws4 4:4
     set $ws5 5:5
     set $ws6 6:6
@@ -229,9 +243,11 @@ bindsym $mod+space mode "application"
     assign [class="firefox$"] → $ws3
     assign [class="Postman$"] → $ws8
     assign [class="discord"] → $wsF1
+    assign [class="Slack"] → $wsF1
     assign [class="Deezer"] → $wsF2
     assign [class="notion-app"] → $wsF3
     assign [class="Typora"] → $wsF4
+    assign [app_id="gummi"] → $wsF4
     assign [class="Thunderbird"] → $wsF5
 
 #

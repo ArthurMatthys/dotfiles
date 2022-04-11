@@ -10,7 +10,7 @@ alias gcl='git clone'
 alias gst='git status'
 
 #compdef g=git
-alias gc='git commit -v'
+alias gc='git commit -S'
 
 #compdef _git gst=git-status
 alias gd='git diff'
@@ -35,3 +35,6 @@ alias vi="nvim"
 alias vim="nvim"
 
 export MAKEFLAGS="-j16"
+fish_add_path ~/.cargo/bin/
+fish_add_path ~/.local/bin
+fish_add_path /usr/lib/node_modules/vscode-langservers-extracted/bin

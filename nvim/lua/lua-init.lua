@@ -1,0 +1,2 @@
+-- plugin installation
+require "plugins"
